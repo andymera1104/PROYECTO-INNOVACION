@@ -25,9 +25,9 @@
       <header class="main-header">
 
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="/main/inicio" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>Sistema Innovación</b></span>
+          <span class="logo-mini"><b>SI</b></span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>Sistema Innovacion</b></span>
         </a>
@@ -46,15 +46,15 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <small class="bg-blue">On</small>
-                  <span class="hidden-xs">Anderson Ivan Mera Lapo</span>
+                  <small class="bg-blue">En Linea  </small>
+                  <span class="hidden-xs"> &nbsp;&nbsp;{{ Auth::user()-> name }}</span>
                 </a>
                 <ul class="dropdown-menu">
                  
                   <li class="user-footer">
                     
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Cerrar</a>
+                      <a href="/main" class="btn btn-default btn-flat">Cerrar</a>
                     </div>
                   </li>
                 </ul>
@@ -76,7 +76,7 @@
             <li class="header"></li>
             
             <li class="treeview">
-              <a href="#">
+              <a href="/main/postulacion">
                 <i class="fa fa-laptop"></i>
                 <span>Postulación</span>
               </a>

@@ -15,6 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route:: get('/inicio',function(){
+Route:: get('main/inicio',function(){
    return view('/layouts/admin');
 });	
+
+Route:: get('/main/postulacion',function(){
+   return view('/postulacion/postulacion');
+});	
+
+
+
+//Route::get('/uploadfile', 'UploadfileController@index');
+//Route::post('/uploadfile', 'UploadfileController@upload');
+Route::get('/main', 'AuthController@index');
+Route::post('/main/checklogin', 'AuthController@checklogin');
+Route::get('main/successlogin', 'AuthController@successlogin');
+Route::get('main/logout', 'AuthController@logout');
