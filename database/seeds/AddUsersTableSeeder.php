@@ -19,5 +19,7 @@ class AddUsersTableSeeder extends Seeder
             'password'   =>  Hash::make('docInnovacion'),
             'remember_token' =>  str_random(10),
         ]);
+
+        
     }
 }

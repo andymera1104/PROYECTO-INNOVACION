@@ -14,20 +14,20 @@
 			@endif
 		</div>
 	</div>
-			{!!Form::open(array('url'=>'postulacion/propuesta','method'=>'POST','autocomplete'=>'off'))!!}
+			{!!Form::open(array('url'=>'postulacion/postulantes','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
 
     <div class="row">
     	<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
     		<div class="form-group">
-            	<label for="nombrepersona">Nombre</label>
+            	<label for="nombrepersona">Nombres</label>
             	<input type="text" name="nombrepersona" requerid value="{{old('nombrepersona')}}" class="form-control" placeholder="Nombres...">
             </div>
     	</div>
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="form-group">
-                <label for="apellidopersona">Apellido</label>
+                <label for="apellidopersona">Apellidos</label>
                 <input type="text" name="apellidopersona" requerid value="{{old('apellidopersona')}}" class="form-control" placeholder="Apellidos...">
             </div>
         </div>
@@ -39,7 +39,7 @@
                 <input type="text" name="cedula" requerid value="{{old('cedula')}}" class="form-control" placeholder="Cedula...">
             </div>
         </div>
-
+ <!--
          <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
             <div class="form-group">
                 <label for="roles">Rol</label>
@@ -163,7 +163,7 @@
                 <input type="text" name="observaciones" value="{{old('observaciones')}}" class="form-control" placeholder="Observaciones...">
             </div>
         </div>  
-
+-->
 
     	<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
     		 <div class="form-group">

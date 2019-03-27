@@ -22,14 +22,15 @@ class PostulanteController extends Controller
 		{
 			$query= trim($request->get('searchText'));
 			$postulantes= DB::table('postulantes')->where('nombrepersona','LIKE','%'.$query.'%')
-				->where('cedula','LIKE','%'.$query.'%')
+			//->where('nombrepersona','=', '{{$query}} ')
+				//->where('cedula','LIKE','%'.$query.'%')
 				->paginate(8);
-			return view('postulantes.index',["postulantes"=>$postulantes, "searchText"=$query]);
+			return view('postulacion.postulantes.index',["postulantes"=>$postulantes, "searchText"=>$query]);
 		}
 	}
 
 	public function create(){
-		return view ("postulantes.create");
+		return view ("postulacion/postulantes/create");
 	}
 
 	public function store(PostulanteFormRequest $request){
@@ -38,15 +39,15 @@ class PostulanteController extends Controller
 			$postulante->apellidopersona=$request->get('apellidopersona');
 			$postulante->cedula=$request->get('cedula');
 			$postulante->save();
-			return Redirect::to('postulantes');
+			return Redirect::to("postulacion/postulantes");
 	}
 
 	public function  show($id){
-		return view("postulantes.show",["postulante"=>Postulante::findOrFail($id)]);
+		return view("postulacion/postulantes/show",["postulante"=>Postulante::findOrFail($id)]);
 	}
 
-	public function edit(){
-		return view("postulantes.edit",["postulante"=>Postulante::findOrFail($id)]);
+	public function edit($id){
+		return view("postulacion/postulantes/edit",["postulante"=>Postulante::findOrFail($id)]);
 	}
 
 	public function update(PostulanteFormRequest $request,$id){
@@ -55,7 +56,7 @@ class PostulanteController extends Controller
 		$postulante->apellidopersona=$request->get('apellidopersona');
 		$postulante->cedula=$request->get('cedula');
 		$postulante->save();
-		return Redirect::to('postulantes')
+		return Redirect::to('postulacion/postulantes');
 	}
 
 	public function destroy($id){

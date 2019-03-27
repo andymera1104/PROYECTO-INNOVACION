@@ -8,7 +8,7 @@ class Postulante extends Model
 {
     //
     protected $table='postulantes';
-    protected $primarykey = 'idpostulantes';
+    protected $primaryKey = 'idpostulantes';
 
     public $timestamps=false;
 
