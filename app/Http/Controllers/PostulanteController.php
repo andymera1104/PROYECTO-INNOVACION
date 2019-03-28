@@ -9,6 +9,9 @@ use App\Postulante;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\PostulanteFormRequest;
 use DB;
+use Session;
+use Input;
+use Storage;
 
 class PostulanteController extends Controller
 {
@@ -22,11 +25,12 @@ class PostulanteController extends Controller
 		{
 			$query= trim($request->get('searchText'));
 			$postulantes= DB::table('postulantes')->where('nombrepersona','LIKE','%'.$query.'%')
-			//->where('nombrepersona','=', '{{$query}} ')
 				//->where('cedula','LIKE','%'.$query.'%')
 				->paginate(8);
-			return view('postulacion.postulantes.index',["postulantes"=>$postulantes, "searchText"=>$query]);
+			return view('postulacion.postulantes.index',["postulantes"=>$postulantes, "searchText"=>$query]);	
 		}
+	
+
 	}
 
 	public function create(){

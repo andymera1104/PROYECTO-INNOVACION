@@ -27,7 +27,7 @@ class PostulanteFormRequest extends FormRequest
             //
             'nombrepersona'=>'required|max:20',
             'apellidopersona'=>'required|max:20',
-            'cedula'=>'max:10',
+            'cedula'=>'min:10|max:10',
         ];
     }
 }

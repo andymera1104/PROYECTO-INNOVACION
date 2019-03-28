@@ -1,12 +1,12 @@
 @extends('layouts.admin')
 @section('contenido')
 
-	
+
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm8 col-xs-12">
 		<h1>LISTA POSTULANTES <a href="postulantes/create"><button class="btn btn-success">Nuevo</button></a></h1>
 		@include('postulacion.postulantes.search')
-
+		
 	</div>
 </div>
 
@@ -21,6 +21,7 @@
 					<th>Cédula</th>
 					<th>Opciones</th>
 				</thead>
+				
 				@foreach($postulantes as $postu)
 				<tr>
 					<td>{{$postu-> idpostulantes}}</td>
@@ -32,8 +33,11 @@
 						<a href="" data-target="#modal-delete-{{$postu->idpostulantes}}" data-toggle="modal"> <button class="btn btn-danger">Eliminar</button></a>
 					</td>
 				</tr>
+
 				@include('postulacion.postulantes.modal')
 				@endforeach
+
+								
 			</table>
 		</div>	
 		{{$postulantes->render()}}
