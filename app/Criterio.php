@@ -20,8 +20,8 @@ class Criterio extends Model
 
     ];
 
-    /*public function criterios_propuesta()
+    public function criterios_propuestas()
     {
-    	return $this->hasMany(Criterio_propuesta::class);
-    }*/
+    	return $this->hasMany(Criterio_propuesta::class,'idcriterios');
+    }
 }

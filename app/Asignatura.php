@@ -12,21 +12,25 @@ class Asignatura extends Model
     public $timestamps=false;
 
     protected $fillable =[
-    	'nombreasignatura'
+    	'nombreasignatura',
+        'idcarreras'
+
     ];
 
     protected $guarded= [
 
     ];
 
-    /*public function propuestas()
-    {
-    	return $this->hasMany(Propuesta::class);
-    }
- 	*/
+   
  	public function carrera()
     {
     	return $this->belongsTo(Carrera::class,'idcarreras');
     }
+
+     public function propuestas()
+    {
+        return $this->hasMany(Propuesta::class,'idpropuestas');
+    }
+    
      
 }

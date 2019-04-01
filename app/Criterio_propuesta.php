@@ -36,3 +36,4 @@ class Criterio_propuesta extends Model
     	return $this->belongsTo(Propuesta::class,'idpropuestas');
     }
 }
+

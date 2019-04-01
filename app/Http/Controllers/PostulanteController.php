@@ -13,6 +13,7 @@ use Session;
 use Input;
 use Storage;
 
+
 class PostulanteController extends Controller
 {
     //
@@ -66,6 +67,10 @@ class PostulanteController extends Controller
 	public function destroy($id){
 		$postulante= Postulante::find($id);
 		$postulante->delete();	
+		Session::flash('message', 'Postulante Eliminado');
+		return Redirect::to('postulacion/postulantes');
+
+        
 	}
 
 

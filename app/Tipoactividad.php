@@ -20,8 +20,8 @@ class Tipoactividad extends Model
 
     ];
 
-    /*public function actividades()
+    public function actividades()
     {
-    	return $this->hasMany(Actividad::class);
-    }*/
+    	return $this->hasMany(Actividad::class,'idsecuencia');
+    }
 }

@@ -21,9 +21,9 @@ class Periodo extends Model
     ];
 
 
-   /* public function propuestas()
+    public function propuestas()
     {
-    	return $this->hasMany(Propuesta::class);
+    	return $this->hasMany(Propuesta::class,'idpropuestas');
     }
-    */
+    
 }

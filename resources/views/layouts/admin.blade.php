@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
 
   </head>
-  <body class="hold-transition skin-green sidebar-mini">
+  <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
 
       <header class="main-header">
@@ -27,9 +27,9 @@
         <!-- Logo -->
         <a href="/main/inicio" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>SI</b></span>
+          <span class="logo-mini" ><b>SI</b></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Sistema Innovacion</b></span>
+          <span class="logo-lg"><b>Sistema Innovación</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -46,7 +46,7 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <small class="bg-blue">En Linea  </small>
+                  <small class="bg-green"> <b>En Linea</b>  </small>
                   <span class="hidden-xs"> &nbsp;&nbsp;{{ Auth::user()-> name }}</span>
                 </a>
                 <ul class="dropdown-menu">
@@ -83,20 +83,20 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href=""><i class="fa fa-circle-o"></i> Postulante</a></li>
-                <li><a href=""><i class="fa fa-circle-o"></i> Propuesta</a></li>
+                <li><a href=""><i class="fa fa-circle-o"></i> Asignatura</a></li>
               </ul>
             </li>
             
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-th"></i>
+                <i class="fa fa-pencil fa-fw"></i>
                 <span>Evaluación</span>
               </a>
             </li>
 
             <li class="treeview">
               <a href="#">
-                 <i class="fa fa-th"></i>
+                 <i class="fa fa-book fa-fw"></i>
                 <span>Resultados</span>
               </a>
             </li>
@@ -104,7 +104,7 @@
             
              <li class="treeview">
               <a href="#">
-                <i class="fa fa-th"></i>
+                <i class="fa fa-flag"></i>
                 <span>Proyectos</span>
               </a>
               
@@ -120,7 +120,7 @@
 
              <li class="treeview">
               <a href="#">
-                <i class="fa fa-th"></i>
+                <i class="fa fa-envelope-o fa-fw"></i>
                 <span>Contacto</span>
               </a>
              
@@ -128,7 +128,7 @@
 
              <li class="treeview">
               <a href="#">
-                <i class="fa fa-th"></i>
+                <i class="fa fa-key fa-fw"></i>
                 <span>Formatos</span>
               </a>
              
@@ -196,6 +196,7 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('js/app.min.js')}}"></script>
+    
     
   </body>
 </html>

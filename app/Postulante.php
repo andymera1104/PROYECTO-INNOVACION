@@ -21,4 +21,9 @@ class Postulante extends Model
     protected $guarded= [
 
     ];
+
+     public function postulantes_propuestas()
+    {
+        return $this->hasMany(Propuesta::class,'idpostulantes');
+    }
 }

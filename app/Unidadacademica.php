@@ -20,9 +20,9 @@ class Unidadacademica extends Model
 
     ];
 
-   /* public function carreras()
+    public function carreras()
     {
-    	return $this->hasMany(Carrera::class);
+    	return $this->hasMany(Carrera::class,'idunidadAcademica');
     }
-    */
+    
 }

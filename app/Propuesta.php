@@ -12,6 +12,9 @@ class Propuesta extends Model
     public $timestamps=false;
 
     protected $fillable =[
+        'idperiodos',
+        'idasignaturas',
+        'idpostulantes',
     	'temapropuesta',
     	'presupuesto',
     	'observaciones',
@@ -31,5 +34,10 @@ class Propuesta extends Model
  	public function asignatura()
     {
     	return $this->belongsTo(Asignatura::class,'idasignaturas');
+    }
+
+     public function postulantes()
+    {
+        return $this->belongsTo(Postulante::class,'idpostulantes');
     }
 }

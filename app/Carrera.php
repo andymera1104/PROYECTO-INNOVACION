@@ -13,7 +13,9 @@ class Carrera extends Model
     public $timestamps=false;
 
     protected $fillable =[
-    	'nombrecarrera'
+    	'nombrecarrera',
+        'idunidadAcademica'
+
     ];
 
     protected $guarded= [
@@ -25,10 +27,10 @@ class Carrera extends Model
     	return $this->belongsTo(Unidadacademica::class,'idunidadAcademica');
     }
 	
-	/*
+	
     public function asignaturas()
     {
-    	return $this->hasMany(Asignatura::class);
+    	return $this->hasMany(Asignatura::class,'idasignaturas');
     }
-    */
+    
 }

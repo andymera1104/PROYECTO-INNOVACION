@@ -29,6 +29,10 @@ Route::get('main/logout', 'AuthController@logout');
 
 
 Route::resource('postulacion/postulantes', 'postulanteController'); 
+Route::resource('postulacion/asignaturas','asignaturaController');
+Route::resource('postulacion/propuestas','propuestaController');
+//Route::resource('postulacion/asignaturas/crear','asignaturaController@fetch')->name('asignaturaController.fetch');
+
 
 Route:: get('/main/postulacion',function(){ 
 	return view('/postulacion/create');

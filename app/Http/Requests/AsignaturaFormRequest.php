@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PostulanteFormRequest extends FormRequest
+class AsignaturaFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +25,9 @@ class PostulanteFormRequest extends FormRequest
     {
         return [
             //
-            'nombrepersona'=>'required|max:20',
-            'apellidopersona'=>'required|max:20',
-            'cedula'=>'min:10'
+            //'idunidadAcademica'=>'required',
+            'idcarreras'=>'required',
+            'nombreasignatura'=>'required|max:75'
         ];
     }
 }
