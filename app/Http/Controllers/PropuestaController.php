@@ -22,7 +22,7 @@ class PropuestaController extends Controller
 				->join('periodos as per','pro.idperiodos','=','per.idperiodos')
 				->join('postulantes as postu','pro.idpostulantes','=','postu.idpostulantes')
 
-				->select('pro.idpropuestas','postu.nombrepersona','asig.nombreasignatura','pro.temapropuesta','pro.presupuesto as presupuesto','pro.observaciones as observaciones')
+				->select('pro.idpropuestas','postu.nombrepersona','asig.nombreasignatura','pro.temapropuesta','pro.presupuesto as presupuesto','pro.archivotema','pro.archivocronograma','pro.observaciones as observaciones')
 
 			->where('pro.temapropuesta','LIKE','%'.$query.'%')
 			->orwhere('postu.nombrepersona','LIKE','%'.$query.'%')
@@ -49,14 +49,20 @@ class PropuestaController extends Controller
 			$propuesta->temapropuesta=$request->get('temapropuesta');
 			$propuesta->presupuesto=$request->get('presupuesto');
 			$propuesta->observaciones=$request->get('observaciones');
+
+			$propuesta->idperiodos=$request->get('idperiodos');
+			$propuesta->idasignatura=$request->get('idasignatura');
+			$propuesta->idpostulantes=$request->get('idpostulantes');
+			
+
 			//para subir archivos
-			if(Input::hashFile('archivotema')){
+			if(Input::hasFile('archivotema')){
 				$file=Input::file('archivotema');
 				$file->move(public_path().'/archivos/temas/',$file->getClientOriginalName());
 				$propuesta->archivotema=$file->getClientOriginalName();
 			}
 
-			if(Input::hashFile('archivocronograma')){
+			if(Input::hasFile('archivocronograma')){
 				$file=Input::file('archivocronograma');
 				$file->move(public_path().'/archivos/cronogramas/',$file->getClientOriginalName());
 				$propuesta->archivocronograma=$file->getClientOriginalName();
@@ -64,10 +70,6 @@ class PropuestaController extends Controller
 
 
 
-			$propuesta->idperiodo = $request->get('idperiodos');
-			$propuesta->idasignatura=$request->get('idasignatura');
-			$propuesta->idpostulantes=$request->get('idpostulantes');
-			
 			
 				
 			$propuesta->save();
@@ -96,21 +98,21 @@ class PropuestaController extends Controller
 			$propuesta->presupuesto=$request->get('presupuesto');
 			$propuesta->observaciones=$request->get('observaciones');
 			//para subir archivos
-			if(Input::hashFile('archivotema')){
+			if(Input::hasFile('archivotema')){
 				$file=Input::file('archivotema');
 				$file->move(public_path().'/archivos/temas/',$file->getClientOriginalName());
 				$propuesta->archivotema=$file->getClientOriginalName();
 			}
 
-			if(Input::hashFile('archivocronograma')){
+			if(Input::hasFile('archivocronograma')){
 				$file=Input::file('archivocronograma');
 				$file->move(public_path().'/archivos/cronogramas/',$file->getClientOriginalName());
 				$propuesta->archivocronograma=$file->getClientOriginalName();
 			}
 
+			
 
-
-			$propuesta->idperiodo = $request->get('idperiodos');
+			$propuesta->idperiodos = $request->get('idperiodos');
 			$propuesta->idasignatura=$request->get('idasignatura');
 			$propuesta->idpostulantes=$request->get('idpostulantes');
 		$propuesta->save();

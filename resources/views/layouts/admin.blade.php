@@ -82,8 +82,9 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href=""><i class="fa fa-circle-o"></i> Postulante</a></li>
-                <li><a href=""><i class="fa fa-circle-o"></i> Asignatura</a></li>
+                <li><a href="{{url('postulacion/postulantes')}}"><i class="fa fa-circle-o"></i> Postulante</a></li>
+                <li><a href="{{url('postulacion/asignaturas')}}"><i class="fa fa-circle-o"></i> Asignatura</a></li>
+                <li><a href="{{url('postulacion/propuestas')}}"><i class="fa fa-circle-o"></i> Propuestas</a></li>
               </ul>
             </li>
             
@@ -103,7 +104,7 @@
                        
             
              <li class="treeview">
-              <a href="#">
+              <a href="{{url('proyectos')}}">
                 <i class="fa fa-flag"></i>
                 <span>Proyectos</span>
               </a>

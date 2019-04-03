@@ -28,8 +28,8 @@ class PropuestaFormRequest extends FormRequest
             'temapropuesta'=>'required|max:200',
             'presupuesto'=>'required',
             'observaciones'=>'max:150',
-            'archivotema'=>'required|mimes:pdf', //validar que solo sean archivos pdf
-            'archivocronograma'=>'required|mimes:xls',//validar que solo sean archivos xls
+            'archivotema'=>'mimes:pdf', //validar que solo sean archivos pdf
+            'archivocronograma'=>'mimes:xlsx',//validar que solo sean archivos xls
             'idperiodos'=>'required',
             'idasignatura'=>'required',
             'idpostulantes'=>'required'
