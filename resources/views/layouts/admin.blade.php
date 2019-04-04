@@ -25,7 +25,7 @@
       <header class="main-header">
 
         <!-- Logo -->
-        <a href="/main/inicio" class="logo">
+        <a href="{{('inicio')}}" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini" ><b>SI</b></span>
           <!-- logo for regular state and mobile devices -->
@@ -54,7 +54,7 @@
                   <li class="user-footer">
                     
                     <div class="pull-right">
-                      <a href="/main" class="btn btn-default btn-flat">Cerrar</a>
+                      <a href="{{url('main/logout')}}" class="btn btn-default btn-flat">Cerrar</a>
                     </div>
                   </li>
                 </ul>
@@ -104,10 +104,16 @@
                        
             
              <li class="treeview">
-              <a href="{{url('proyectos')}}">
+              <a href="#">
                 <i class="fa fa-flag"></i>
                 <span>Proyectos</span>
+                <i class="fa fa-angle-left pull-right"></i>
               </a>
+               <ul class="treeview-menu">
+                <li><a href="{{url('proyectos/propuestas')}}"><i class="fa fa-circle-o"></i>Reporte Propuestas</a></li>
+                <li><a href="{{url('proyectos/')}}"><i class="fa fa-circle-o"></i> Reporte Evaluaciones</a></li>
+                <li><a href="{{url('proyectos/')}}"><i class="fa fa-circle-o"></i> Reporte Gana</a></li>
+              </ul>
               
             </li>
              

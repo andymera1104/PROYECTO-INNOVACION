@@ -27,11 +27,11 @@ class AuthController extends Controller
 
             if(Auth::attempt($user_data))
                 {
-            return redirect('main/inicio');
+            return redirect('inicio');
                  }
             else
              {
-              return back()->with('error', 'DATOS INCORRECTO');
+              return back()->with('error', 'DATOS INCORRECTOS');
              }
 
             }

@@ -16,6 +16,9 @@ use DB;
 class ProyectosController extends Controller
 {
     //
+    public function __construct(){
+		$this->middleware('auth');
+	}
 
 	public function index(Request $request ){
 		if($request)
@@ -34,6 +37,7 @@ class ProyectosController extends Controller
 			->where('pro.temapropuesta','LIKE','%'.$query.'%')
 			->orwhere('postu.nombrepersona','LIKE','%'.$query.'%')
 			->orwhere('ua.nombreUA','LIKE','%'.$query.'%')
+			->orwhere('per.periodo','LIKE','%'.$query.'%')
 			->orderBy('pro.idpropuestas','desc')
 			->paginate(8);
 			return view('proyectos.index',["propuestas"=>$propuestas, "searchText"=>$query]);	

@@ -12,17 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login/login');
 });
 
-Route:: get('main/inicio',function(){
+Route:: get('inicio',function(){
    return view('/layouts/admin');
 });	
 
 
 //Route::get('/uploadfile', 'UploadfileController@index');
 //Route::post('/uploadfile', 'UploadfileController@upload');
-Route::get('/main', 'AuthController@index');
+Route::auth();
+
+Route::get('/main', 'AuthController@index')->name('main');
 Route::post('/main/checklogin', 'AuthController@checklogin');
 Route::get('main/successlogin', 'AuthController@successlogin');
 Route::get('main/logout', 'AuthController@logout');
@@ -31,10 +33,7 @@ Route::get('main/logout', 'AuthController@logout');
 Route::resource('postulacion/postulantes', 'postulanteController'); 
 Route::resource('postulacion/asignaturas','asignaturaController');
 Route::resource('postulacion/propuestas','propuestaController');
-Route::resource('proyectos','proyectosController');
+Route::resource('proyectos/propuestas','proyectosController');
 //Route::resource('postulacion/asignaturas/crear','asignaturaController@fetch')->name('asignaturaController.fetch');
 
 
-Route:: get('/main/postulacion',function(){ 
-	return view('/postulacion/create');
-	});	
