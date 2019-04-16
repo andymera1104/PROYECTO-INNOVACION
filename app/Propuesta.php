@@ -40,4 +40,9 @@ class Propuesta extends Model
     {
         return $this->belongsTo(Postulante::class,'idpostulantes');
     }
+
+    public function criterios()
+    {
+        return $this->hasMany(Criterio::class,'idcriterios');
+    }
 }

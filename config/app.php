@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         //laravel collective 
         Collective\Html\HtmlServiceProvider::class,
+        
 
     ],
 
@@ -230,6 +231,8 @@ return [
         
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        //'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        //'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
     ],
 
 ];

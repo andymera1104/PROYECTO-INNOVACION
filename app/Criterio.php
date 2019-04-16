@@ -13,15 +13,18 @@ class Criterio extends Model
     public $timestamps=false;
 
     protected $fillable =[
-    	'descripcion'
+    	'idpropuestas',
+        'descripcion'
+        //'ponderacion',
+        //'calificacion'
     ];
 
     protected $guarded= [
 
     ];
 
-    public function criterios_propuestas()
+    public function propuesta()
     {
-    	return $this->hasMany(Criterio_propuesta::class,'idcriterios');
+    	return $this->belongsTo(Propuesta::class,'idpropuestas');
     }
 }

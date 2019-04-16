@@ -89,7 +89,7 @@
             </li>
             
             <li class="treeview">
-              <a href="#">
+              <a href="{{url('evaluacion')}}">
                 <i class="fa fa-pencil fa-fw"></i>
                 <span>Evaluación</span>
               </a>
@@ -117,7 +117,7 @@
               
             </li>
              
-              <li class="treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-th"></i>
                 <span>Diagramas</span>

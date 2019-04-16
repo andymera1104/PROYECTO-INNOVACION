@@ -34,6 +34,7 @@ Route::resource('postulacion/postulantes', 'postulanteController');
 Route::resource('postulacion/asignaturas','asignaturaController');
 Route::resource('postulacion/propuestas','propuestaController');
 Route::resource('proyectos/propuestas','proyectosController');
+Route::resource('evaluacion','CriteriosController');
 //Route::resource('postulacion/asignaturas/crear','asignaturaController@fetch')->name('asignaturaController.fetch');
 
 

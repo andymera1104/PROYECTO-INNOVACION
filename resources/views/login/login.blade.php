@@ -12,7 +12,7 @@
     height: 375px;
     margin:0 auto;
     border-radius: 15px 15px 15px 15px;
-    border:4px dashed #2133A1;
+    border:2px solid #2133A1;
     }
     #caja{
       width: 550px;
@@ -32,9 +32,9 @@
 
   <div class="container box" style="background-color: #44C3DA;">
             
-            <h2 align="center" style="font-family:Corbel Italic">SISTEMA DE INNOVACIÓN</h2>
-            <h4 align="center" style="font-family:Corbel Italic"> <b> DIRECCIÓN DE INVESTIGACIÓN</b></h4>
-            <h4 align="center" style="font-family:Corbel Italic"><b>INICIO DE SESIÓN</b></h4>
+            <h2 align="center" style="font-family:Comic Sans">SISTEMA DE INNOVACIÓN</h2>
+            <h4 align="center" style="font-family:Comic Sans"> <b> DIRECCIÓN DE INVESTIGACIÓN</b></h4>
+            <h4 align="center" style="font-family:Comic Sans"><b>INICIO DE SESIÓN</b></h4>
             
             
 
