@@ -96,7 +96,7 @@
             </li>
 
             <li class="treeview">
-              <a href="#">
+              <a href="{{url('resultados/evaluaciones')}}">
                  <i class="fa fa-book fa-fw"></i>
                 <span>Resultados</span>
               </a>
@@ -111,19 +111,12 @@
               </a>
                <ul class="treeview-menu">
                 <li><a href="{{url('proyectos/propuestas')}}"><i class="fa fa-circle-o"></i>Reporte Propuestas</a></li>
-                <li><a href="{{url('proyectos/')}}"><i class="fa fa-circle-o"></i> Reporte Evaluaciones</a></li>
-                <li><a href="{{url('proyectos/')}}"><i class="fa fa-circle-o"></i> Reporte Gana</a></li>
+                <li><a href="{{url('proyectos/evaluaciones')}}"><i class="fa fa-circle-o"></i> Reporte Evaluaciones</a></li>
+                <li><a href="{{url('proyectos/ganadores')}}"><i class="fa fa-circle-o"></i> Reporte Ganadores</a></li>
               </ul>
               
             </li>
              
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-th"></i>
-                <span>Diagramas</span>
-              </a>
-           
-            </li>
 
              <li class="treeview">
               <a href="#">

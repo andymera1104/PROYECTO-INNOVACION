@@ -4,8 +4,9 @@
 
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm8 col-xs-12">
-		<h1>REPORTE PROPUESTAS </h1>
-		@include('proyectos.search')
+		<h1>RESULTADOS GANADORES </h1>
+		<p>Se presentan las propuestas que fueron aprobadas con una nota mayor a 80%</p>
+		@include('resultados.search')
 		
 	</div>
 </div>
@@ -17,40 +18,39 @@
 				<thead>
 					<th>Id</th>
 					<th>Nombres</th>
-					<th>Carrera</th>
 					<th>Facultad</th>
 					<th>Asignaturas</th>
 					<th>Tema Propuesta</th>
-					<th>Presupuesto</th>
 					<th>Periodo</th>
-					<th>Observaciones</th>
+					<th>Estado</th>
+					<th>Calificación</th>
 					
 				</thead>
 				
-				@foreach($propuestas as $pro)
-					
+				@foreach($evaluaciones as $eva)
+				@if($eva->calificacion >=80)	
 
 				<tr>
-					<td>{{$pro-> idpropuestas}}</td>
-					<td>{{$pro-> nombrepersona}}</td>
-					<td>{{$pro-> carrera}}</td>
-					<td>{{$pro-> facultad}}</td>
-					<td>{{$pro-> nombreasignatura}}</td>
-					<td><b>{{$pro-> temapropuesta}}</td>
-					<td>{{$pro-> presupuesto}}</td>
-					<td>{{$pro->periodo}}</td>
-					<td>{{$pro-> observaciones}}</td>
+					<td>{{$eva-> idpropuestas}}</td>
+					<td>{{$eva-> nombrepersona}}</td>
+					<td>{{$eva-> facultad}}</td>
+					<td>{{$eva-> nombreasignatura}}</td>
+					<td><b>{{$eva-> temapropuesta}}</td>
+					<td>{{$eva->periodo}}</td>
+					<td>{{$eva-> estado}}</td>
+					
+					<th>{{$eva-> calificacion}}</th>
 					
 					
 				</tr>
 
-					
+					@endif
 				@endforeach
 
 								
 			</table>
 		</div>	
-		{{$propuestas->render()}}
+		{{$evaluaciones->render()}}
 	</div>
 </div>
 
