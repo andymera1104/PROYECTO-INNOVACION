@@ -62,7 +62,7 @@
           <form method="post" action="{{ url('/main/checklogin') }}">
               {{ csrf_field() }}
             <div class="form-group"  >
-              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-sign-in fa-2x"></i>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-user fa-2x"></i>
               <input type="email" id="caja" name="email" class="form-control" placeholder="Ingrese Correo..." style = "float: right"/>
 
             </div>

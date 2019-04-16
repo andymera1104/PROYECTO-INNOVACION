@@ -5,6 +5,7 @@
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm8 col-xs-12">
 		<h1>EVALUACIÓN PROPUESTAS  <a href="evaluacion/create"><button class="btn btn-success">Evaluar</button></a></h1>  
+		<b><h4 style="color:red">SÓLO PERSONAL AUTORIZADO <i class="fa fa-exclamation-triangle"></i></h4></b>
 		@include('evaluacion.search')
 		
 	</div>

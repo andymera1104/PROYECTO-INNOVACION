@@ -54,7 +54,8 @@
                   <li class="user-footer">
                     
                     <div class="pull-right">
-                      <a href="{{url('main/logout')}}" class="btn btn-default btn-flat">Cerrar</a>
+                     &nbsp&nbsp
+                      <a href="{{url('main/logout')}}" class="btn btn-danger btn-flat" > <i class="fa fa-sign-out "></i> Cerrar Sesión</a>
                     </div>
                   </li>
                 </ul>
@@ -77,7 +78,7 @@
             
             <li class="treeview">
               <a href="/main/postulacion">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-user-plus"></i>
                 <span>Postulación</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -88,16 +89,10 @@
               </ul>
             </li>
             
-            <li class="treeview">
-              <a href="{{url('evaluacion')}}">
-                <i class="fa fa-pencil fa-fw"></i>
-                <span>Evaluación</span>
-              </a>
-            </li>
 
             <li class="treeview">
               <a href="{{url('resultados/evaluaciones')}}">
-                 <i class="fa fa-book fa-fw"></i>
+                <i class="fa fa-file-text"></i>
                 <span>Resultados</span>
               </a>
             </li>
@@ -105,22 +100,30 @@
             
              <li class="treeview">
               <a href="#">
-                <i class="fa fa-flag"></i>
-                <span>Proyectos</span>
+                <i class="fa fa-pie-chart"></i>
+                <span>Reportes</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                <ul class="treeview-menu">
                 <li><a href="{{url('proyectos/propuestas')}}"><i class="fa fa-circle-o"></i>Reporte Propuestas</a></li>
-                <li><a href="{{url('proyectos/evaluaciones')}}"><i class="fa fa-circle-o"></i> Reporte Evaluaciones</a></li>
-                <li><a href="{{url('proyectos/ganadores')}}"><i class="fa fa-circle-o"></i> Reporte Ganadores</a></li>
+                <li><a href="{{url('proyectos/evaluaciones')}}"><i class="fa fa-circle-o"></i>Reporte Evaluaciones</a></li>
+                <li><a href="{{url('proyectos/ganadores')}}"><i class="fa fa-circle-o"></i>Reporte Ganadores</a></li>
               </ul>
               
+            </li>
+
+             <li class="treeview">
+              <a href="{{url('evaluacion')}}">
+                <i class="fa fa-edit"></i>
+                <span>Evaluación (Admin <i class="fa fa-exclamation-triangle" style="color: yellow"></i>)</span>
+
+              </a>
             </li>
              
 
              <li class="treeview">
               <a href="#">
-                <i class="fa fa-envelope-o fa-fw"></i>
+                <i class="fa fa-envelope"></i>
                 <span>Contacto</span>
               </a>
              
@@ -128,7 +131,7 @@
 
              <li class="treeview">
               <a href="#">
-                <i class="fa fa-key fa-fw"></i>
+                <i class="fa fa-cloud-download"></i>
                 <span>Formatos</span>
               </a>
              
